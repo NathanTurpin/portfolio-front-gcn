@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap");
+
+$work-sans-regular: "Work Sans", sans-serif;
+$work-sans-light: "Work Sans Light", sans-serif;
+$work-sans-medium: "Work Sans Medium", sans-serif;
+
+h1 {
+  font-family: $work-sans-medium;
+  font-size: 32px;
+  line-height: 120%;
+}
+
+h2 {
+  font-family: $work-sans-medium;
+  font-size: 28px;
+  line-height: 120%;
+}
+
+h3 {
+  font-family: $work-sans-light;
+  font-size: 26px;
+  line-height: 120%;
+  font-weight: 300;
+}
+
+.label {
+  font-family: $work-sans-medium;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 1.5px;
+}
+
+body {
+  font-family: $work-sans-light;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 1.5px;
+}
+
+a {
+  font-family: $work-sans-regular;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 1.5px;
+}
