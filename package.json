@@ -9,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vue-flow/core": "^1.27.1",
     "@vueuse/core": "^10.7.0",
+    "leader-line": "^1.0.7",
+    "leader-line-new": "^1.1.9",
     "vue": "^3.3.11",
     "vue-router": "4",
     "vuedraggable": "^4.1.0"

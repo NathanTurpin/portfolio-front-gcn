@@ -1,21 +1,25 @@
 
 <script setup>
-import { onMounted, reactive } from "vue";
+import { onMounted, reactive, ref } from "vue";
 import CardExpertise from "../components/MonExpertise/CardExpertise.vue";
+import DiagramsExpertise from "../components/MonExpertise/DiagramsExpertise.vue";
 const monExpertises = reactive([
   {
     title: "Identité de marque",
     subTitle: "2 packs",
     active: false,
+    references: ref(["cardRef1", "rondRef1"]),
   },
   {
     title: "Conception UI",
     subTitle: "2 packs",
     active: false,
+    references: ref(["cardRef2", "rondRef2"]),
   },
   {
     title: "Démarche UX",
     active: false,
+    references: ref(["cardRef3"]),
   },
 ]);
 
@@ -41,10 +45,12 @@ onMounted(() => {
             :title="monExpertise.title"
             :subTitle="monExpertise.subTitle ? monExpertise.subTitle : ''"
             :active="monExpertise.active"
+            :references="monExpertise.references"
             @click="onChangeCard(index)"
           />
         </div>
       </div>
+      <DiagramsExpertise />
     </section>
   </div>
 </template>
@@ -52,6 +58,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .mon-expertise {
+  height: 500px;
   h3 {
     color: #404040;
     margin-left: 3rem;
@@ -61,6 +68,7 @@ onMounted(() => {
     display: flex;
     flex-direction: row;
     margin-left: 3rem;
+
     gap: 1rem;
   }
 }
