@@ -5,8 +5,8 @@ const postIts = [
   {
     text: "Je conçois des sites web, des applications et des identités graphiques",
     author: "Camille Glaçon",
-    width: "320px",
-    height: "230px",
+    width: "420px",
+    height: "330px",
     color: "--violet",
     id: 0,
     initialTop: 4,
@@ -16,8 +16,8 @@ const postIts = [
   {
     text: "Je suis Camille Glaçon",
     author: "Camille Glaçon",
-    width: "270px",
-    height: "150px",
+    width: "370px",
+    height: "250px",
     color: "--beige",
     id: 2,
     initialTop: 5,
@@ -27,7 +27,7 @@ const postIts = [
   {
     text: "UX/UI Designer & Brand Designer ",
     author: "Camille Glaçon",
-    width: "300px",
+    width: "400px",
     height: "200px",
     color: "--vert",
     id: 1,

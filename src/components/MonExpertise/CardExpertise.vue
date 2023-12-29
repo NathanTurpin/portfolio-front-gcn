@@ -47,26 +47,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="card">
-    <div
-      class="cardExpertise"
-      :class="props.active ? 'active' : ''"
-      :ref="skipUnwrap.itemRefs"
-    >
+  <div>
+    <div class="cardExpertise" :class="props.active ? 'active' : ''">
       <span class="label">
         {{ props.title }}
       </span>
       <div v-if="props.subTitle" class="cardExpertise__subTitle">
         {{ props.subTitle }}
       </div>
-    </div>
-
-    <div
-      class="rond"
-      v-if="props.references.length > 1"
-      :ref="props.references[1]"
-    >
-      <img src="../../assets/Plus.svg" alt="" />
     </div>
   </div>
 </template>
@@ -76,39 +64,16 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-
-  .cardExpertise {
-    width: fit-content;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--primarySurface);
-    color: var(--secondaryContent);
-    border-radius: 0.5rem;
-    box-shadow: 0px 4px 15px 5px #0000000d;
-
-    &__subTitle {
-      border: 1px solid;
-      border-radius: 0.2rem;
-      padding: 0px 8px;
-    }
-  }
-
-  .active {
-    color: var(--primarySurface);
-    background-color: var(--primaryContent);
-  }
-
-  .rond {
-    display: flex;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: violet;
-    border-radius: 50%;
+  justify-content: space-between;
+  background-color: var(--primarySurface);
+  color: var(--secondaryContent);
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 15px 5px #0000000d;
+  cursor: pointer;
+  &__subTitle {
+    border: 1px solid;
+    border-radius: 0.2rem;
+    padding: 0px 8px;
   }
 }
 </style>

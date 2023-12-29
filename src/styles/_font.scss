@@ -24,17 +24,22 @@ h3 {
 }
 
 .label {
-  font-family: $work-sans-medium;
+  font-family: $work-sans-regular;
   font-size: 20px;
-  line-height: 150%;
-  letter-spacing: 1.5px;
+  line-height: 125%;
+  letter-spacing: 1px;
+  font-style: normal;
+  font-weight: 500;
 }
 
 body {
-  font-family: $work-sans-light;
+  color: var(--primaryContent);
+  font-family: $work-sans-regular;
   font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
   line-height: 150%;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.9px;
 }
 
 a {
