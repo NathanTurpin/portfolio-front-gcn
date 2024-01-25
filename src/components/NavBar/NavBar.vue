@@ -1,10 +1,10 @@
 <script setup >
-import Button from "./Button.vue";
+import Button from "../Button.vue";
 </script>
 
 <template>
   <nav class="navbar">
-    <img src="../assets/logo.svg" alt="logo" class="navbar__img" />
+    <img src="../../assets/logo.svg" alt="logo" class="navbar__img" />
     <div class="navbar__link">
       <router-link to="">Mes services</router-link>
       <router-link to="">Projets</router-link>

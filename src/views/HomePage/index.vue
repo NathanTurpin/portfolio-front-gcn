@@ -1,8 +1,7 @@
 
 <script setup>
 import { onMounted, reactive, ref } from "vue";
-import CardExpertise from "../components/MonExpertise/CardExpertise.vue";
-import DiagramsExpertise from "../components/MonExpertise/DiagramsExpertise.vue";
+import CardExpertise from "./Components/MonExpertise/CardExpertise.vue";
 const monExpertises = reactive([
   {
     title: "Identité de marque",
@@ -34,7 +33,7 @@ onMounted(() => {
 </script>
 <template>
   <div>
-    <section class="mon-expertise">
+    <!-- <section class="mon-expertise">
       <h3>Mon expertise</h3>
       <div class="cardExpertises">
         <div
@@ -50,8 +49,7 @@ onMounted(() => {
           />
         </div>
       </div>
-      <DiagramsExpertise />
-    </section>
+    </section> -->
   </div>
 </template>
 
