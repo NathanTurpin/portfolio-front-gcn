@@ -3,70 +3,23 @@ const props = defineProps({
   title: String,
   subTitle: { type: String, required: false },
   active: Boolean,
-  references: { type: Array, required: false },
+  contents: { type: Array },
 });
 
-import LeaderLine from "leader-line-new";
-import { onBeforeUnmount, onMounted, ref } from "vue";
-const itemRefs = ref([]);
-const skipUnwrap = { itemRefs };
-const myRef1 = ref(props.references[0]);
-const myRef2 = ref(props.references[1]);
+import { onMounted, ref } from "vue";
 
-onMounted(() => {
-  console.log(itemRefs.value.map((i) => i.textContent));
-  const drawLine = () => {
-    console.log(itemRefs.value.map((i) => i.textContent));
-    console.log(myRef1.value);
-    if (props.references[1] !== undefined) {
-      new LeaderLine(
-        props.references[0], // Changement ici pour inverser la direction
-        LeaderLine.pointAnchor(props.references[1]),
-        {
-          path: "fluid",
-          startSocket: "bottom",
-          endSocket: "left",
-          color: "black",
-          size: 2,
-        }
-      );
-    }
-  };
-
-  const timer = setInterval(() => {
-    // if (myRef2.value) {
-    clearInterval(timer);
-    drawLine();
-    // }
-  }, 5);
-
-  onBeforeUnmount(() => {
-    clearInterval(timer);
-  });
-});
+onMounted(() => {});
 </script>
 
 <template>
   <div class="card">
-    <div
-      class="cardExpertise"
-      :class="props.active ? 'active' : ''"
-      :ref="skipUnwrap.itemRefs"
-    >
+    <div class="cardExpertise" :class="props.active ? 'active' : ''">
       <span class="label">
         {{ props.title }}
       </span>
       <div v-if="props.subTitle" class="cardExpertise__subTitle">
         {{ props.subTitle }}
       </div>
-    </div>
-
-    <div
-      class="rond"
-      v-if="props.references.length > 1"
-      :ref="props.references[1]"
-    >
-      <img src="../../assets/Plus.svg" alt="" />
     </div>
   </div>
 </template>
@@ -77,6 +30,7 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  cursor: pointer;
 
   .cardExpertise {
     width: fit-content;
@@ -89,7 +43,7 @@ onMounted(() => {
     color: var(--secondaryContent);
     border-radius: 0.5rem;
     box-shadow: 0px 4px 15px 5px #0000000d;
-
+    gap: 15px;
     &__subTitle {
       border: 1px solid;
       border-radius: 0.2rem;
@@ -98,8 +52,12 @@ onMounted(() => {
   }
 
   .active {
-    color: var(--primarySurface);
     background-color: var(--primaryContent);
+    color: var(--primarySurface);
+
+    .label {
+      color: var(--primarySurface);
+    }
   }
 
   .rond {
